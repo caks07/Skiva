@@ -1,0 +1,57 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="383dp"
+        android:layout_height="127dp"
+        android:background="@drawable/combined_background">
+
+        <ImageView
+            android:id="@+id/item_coin"
+            android:layout_width="64dp"
+            android:layout_height="31dp"
+            android:layout_marginLeft="300dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/coin_gold" />
+
+        <TextView
+            android:id="@+id/detail_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:text="TGL/BULAN/TAHUN"
+            android:textColor="#3C3C3C" />
+
+        <TextView
+            android:id="@+id/judul_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:text="dr. Agoes Cawiksana"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/poin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="16dp"
+            android:text="7000 aura"
+            android:textStyle="bold"
+            tools:textColor="#17C2EC" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+</LinearLayout>

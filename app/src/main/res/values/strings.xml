@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SKIVA</string>
+    <string name="AIzaSyBubYYFS_n2MkhAHkYbFZL7OhUKDfaq4LA">YOUR_WEB_CLIENT_ID</string>
+    <string-array name="jenis_obat_array">
+        <item>Tablet</item>
+        <item>Sirup</item>
+        <item>Kapsul</item>
+        <item>Lainnya</item>
+    </string-array>
+
+
+</resources>

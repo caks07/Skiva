@@ -1,0 +1,61 @@
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:layout_marginBottom="12dp"
+    card_view:cardCornerRadius="16dp"
+    card_view:cardElevation="4dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imagePenyakit"
+            android:layout_width="91dp"
+            android:layout_height="102dp"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/gambar_penyakit" />
+
+        <LinearLayout
+            android:layout_width="264dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="120dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/namaPenyakit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Milia"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/kategoriPenyakit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Wajah"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/deskripsi"
+                android:layout_width="246dp"
+                android:layout_height="25dp"
+                android:text="Ruam, Gatal, Infeksi"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/buttonPenjelasan"
+                android:layout_width="252dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="0dp"
+                android:backgroundTint="#17C2EC"
+                android:text="Selengkapnya"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </FrameLayout>
+</androidx.cardview.widget.CardView>

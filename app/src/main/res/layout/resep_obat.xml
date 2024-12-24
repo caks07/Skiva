@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="389dp"
+        android:layout_height="676dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="#FFFFFF"
+        app:cardCornerRadius="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <EditText
+            android:layout_width="310dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="360dp"
+            android:background="@drawable/background_obat2"
+            android:id="@+id/catatan"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="110dp"
+            android:text="Tanggal Akhir Resep"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/tanggalMulai"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="130dp"
+            android:background="@drawable/background_obat2"
+            android:ems="6"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/tanggalAkhir"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="130dp"
+            android:background="@drawable/background_obat2"
+            android:ems="6"
+            android:inputType="date" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="170dp"
+            android:text="Frekuensi/hari"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/frekuensi"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="190dp"
+            android:background="@drawable/background_obat2"
+            android:ems="15"
+            android:inputType="text" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupWaktu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="250dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/checkBoxPagi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pagi" />
+
+            <CheckBox
+                android:id="@+id/checkBoxSiang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Siang" />
+
+            <CheckBox
+                android:id="@+id/checkBoxSore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sore" />
+
+            <CheckBox
+                android:id="@+id/checkBoxMalam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Malam" />
+
+        </RadioGroup>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="230dp"
+            android:layout_marginBottom="20dp"
+            android:text="Jadwal"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/dosis"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="300dp"
+            android:background="@drawable/background_obat2"
+            android:ems="6" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="280dp"
+            android:text="Dosis"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/jenisObatSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="225dp"
+            android:layout_marginTop="300dp"
+            android:background="@drawable/background_obat2"
+            android:entries="@array/jenis_obat_array" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="340dp"
+            android:text="Catatan"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="480dp"
+            android:text="Pengingat?"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="510dp"
+            android:text="Upload Foto Resep"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="310dp"
+            android:layout_marginTop="480dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="110dp"
+            android:text="Tanggal Mulai Resep"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:text="Nama Obat"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="225dp"
+            android:layout_marginTop="280dp"
+            android:text="Jenis"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="540dp"
+            android:backgroundTint="#00FFFFFF"
+            app:srcCompat="@drawable/b_upload_resep" />
+
+        <EditText
+            android:id="@+id/namaObat"
+            android:layout_width="wrap_content"
+            android:layout_height="41dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/background_obat2"
+            android:ems="15"
+            android:inputType="text" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
