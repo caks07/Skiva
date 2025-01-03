@@ -56,7 +56,7 @@
         app:layout_constraintVertical_bias="0.933" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/Nama"
         android:layout_width="126dp"
         android:layout_height="32dp"
         android:layout_marginTop="30dp"
@@ -142,7 +142,7 @@
         app:layout_constraintVertical_bias="0.431" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/Email"
         android:layout_width="314dp"
         android:layout_height="49dp"
         android:layout_marginTop="120dp"
@@ -156,7 +156,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/poin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -164,7 +164,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/Email"
         app:layout_constraintVertical_bias="0.56"
         app:srcCompat="@drawable/loading" />
 
@@ -176,19 +176,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/Email"
         app:layout_constraintVertical_bias="0.8"
         app:srcCompat="@drawable/loading" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/ubahPaassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/bNext1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.56"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/Email"
         app:layout_constraintVertical_bias="0.807"
         app:srcCompat="@drawable/loading" />
 
@@ -212,7 +212,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.624"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/Email"
         app:layout_constraintVertical_bias="0.285"
         app:srcCompat="@drawable/loading4" />
 

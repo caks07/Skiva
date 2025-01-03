@@ -16,27 +16,25 @@ class JadwalObatViewModel(private val repository: JadwalObatRepository) : ViewMo
 
     fun loadJadwalObat(userId: String) {
         repository.getJadwalObat(userId, "Pagi", { data ->
+            Log.d("JadwalObatViewModel", "Data Pagi: $data")
             jadwalObatPagi.postValue(data)
-            Log.d("JadwalObatViewModel", "Pagi: $data")
-        }, { Log.e("JadwalObatViewModel", "Error loading Pagi") })
+        }, { Log.e("JadwalObatViewModel", "Error loading Pagi: ${it.message}") })
 
         repository.getJadwalObat(userId, "Siang", { data ->
+            Log.d("JadwalObatViewModel", "Data Siang: $data")
             jadwalObatSiang.postValue(data)
-            Log.d("JadwalObatViewModel", "Siang: $data")
-        }, { Log.e("JadwalObatViewModel", "Error loading Siang") })
+        }, { Log.e("JadwalObatViewModel", "Error loading Siang: ${it.message}") })
 
         repository.getJadwalObat(userId, "Sore", { data ->
+            Log.d("JadwalObatViewModel", "Data Sore: $data")
             jadwalObatSore.postValue(data)
-            Log.d("JadwalObatViewModel", "Sore: $data")
-        }, { Log.e("JadwalObatViewModel", "Error loading Sore") })
+        }, { Log.e("JadwalObatViewModel", "Error loading Sore: ${it.message}") })
 
         repository.getJadwalObat(userId, "Malam", { data ->
+            Log.d("JadwalObatViewModel", "Data Malam: $data")
             jadwalObatMalam.postValue(data)
-            Log.d("JadwalObatViewModel", "Malam: $data")
-        }, { Log.e("JadwalObatViewModel", "Error loading Malam") })
+        }, { Log.e("JadwalObatViewModel", "Error loading Malam: ${it.message}") })
     }
-
-
 }
 
 

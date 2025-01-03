@@ -1,8 +1,5 @@
 package com.example.skiva.UI
-//Muhammad Hidayat Arga Wicaksana - 22523071
-//Radyan Laksmana WIrawan - 22523167
-//Wisnu Arya Pradipta - 22523241
-//Aditama Bayu Nugroho - 22523046
+
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
@@ -11,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.skiva.R
+import com.example.skiva.utils.DatabaseSeeder
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -27,6 +25,18 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val seeder = DatabaseSeeder()
+        seeder.seedData(
+            onSuccess = {
+                Log.d("DatabaseSeeder", "Data berhasil ditambahkan ke Firebase Realtime Database.")
+            },
+            onFailure = { errorMessage ->
+                Log.e("DatabaseSeeder", "Gagal menambahkan data: $errorMessage")
+            }
+        )
+
+        // Example test to read a simple message from Firebase
         val database = FirebaseDatabase.getInstance("https://skiva-pab-default-rtdb.asia-southeast1.firebasedatabase.app")
         val myRef = database.getReference("message")
 
@@ -34,14 +44,11 @@ class MainActivity : AppCompatActivity() {
 
         myRef.setValue("Hello, World!")
 
-        myRef.addValueEventListener(object: ValueEventListener {
-
+        myRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
                 val value = snapshot.getValue<String>()
                 tvTest.text = value
-                Log.d("Firebase", "Value is: " + value)
+                Log.d("Firebase", "Value is: $value")
             }
 
             override fun onCancelled(error: DatabaseError) {

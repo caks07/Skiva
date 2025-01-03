@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.Spinner
-import android.widget.TextView
 import androidx.core.widget.addTextChangedListener
 import androidx.recyclerview.widget.RecyclerView
 import com.example.skiva.R
@@ -16,8 +15,8 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 
 
-class InputObatAdapter(private val dataList: MutableList<DataObat>) :
-    RecyclerView.Adapter<InputObatAdapter.ViewHolderClass>() {
+class AdapterInputObat(private val dataList: MutableList<DataObat>) :
+    RecyclerView.Adapter<AdapterInputObat.ViewHolderClass>() {
 
     inner class ViewHolderClass(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val namaObat: EditText = itemView.findViewById(R.id.namaObat)

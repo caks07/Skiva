@@ -13,6 +13,39 @@
         android:theme="@style/Theme.SKIVA"
         tools:targetApi="31">
         <activity
+            android:name=".UI.desc_artikel"
+            android:exported="false" />
+        <activity
+            android:name=".UI.detail_dokter"
+            android:exported="false" />
+        <activity
+            android:name=".UI.promo"
+            android:exported="false" />
+        <activity
+            android:name=".UI.laporan"
+            android:exported="false" />
+        <activity
+            android:name=".UI.layanan_konsultasi"
+            android:exported="false" />
+        <activity
+            android:name=".UI.detail_penyakit"
+            android:exported="false" />
+        <activity
+            android:name=".UI.pengingat_skincare"
+            android:exported="false" />
+        <activity
+            android:name=".UI.input_skincare"
+            android:exported="false" />
+        <activity
+            android:name=".UI.artikel"
+            android:exported="false" />
+        <activity
+            android:name=".UI.notifikasi"
+            android:exported="false" />
+        <activity
+            android:name=".UI.profile"
+            android:exported="false" />
+        <activity
             android:name=".UI.badge"
             android:exported="false" />
         <activity

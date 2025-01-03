@@ -52,7 +52,7 @@
     </FrameLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/editProfile"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@drawable/button"
@@ -70,9 +70,9 @@
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:src="@drawable/round_cloud_upload_24"
-        app:layout_constraintBottom_toBottomOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="@+id/button"
-        app:layout_constraintStart_toStartOf="@+id/button"
-        app:layout_constraintTop_toTopOf="@+id/button" />
+        app:layout_constraintBottom_toBottomOf="@+id/editProfile"
+        app:layout_constraintEnd_toEndOf="@+id/editProfile"
+        app:layout_constraintStart_toStartOf="@+id/editProfile"
+        app:layout_constraintTop_toTopOf="@+id/editProfile" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

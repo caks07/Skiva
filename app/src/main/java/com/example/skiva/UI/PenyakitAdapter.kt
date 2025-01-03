@@ -17,7 +17,7 @@ class PenyakitAdapter(private val listPenyakit: List<Penyakit>) :
     inner class PenyakitViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imagePenyakit: ImageView = itemView.findViewById(R.id.imagePenyakit)
         val namaPenyakit: TextView = itemView.findViewById(R.id.namaPenyakit)
-        val deskripsi: TextView = itemView.findViewById(R.id.deskripsi)
+        val deskripsi: TextView = itemView.findViewById(R.id.deskripsiPenyakit)
         val kategoriPenyakit: TextView = itemView.findViewById(R.id.kategoriPenyakit)
         val buttonPenjelasan: Button = itemView.findViewById(R.id.buttonPenjelasan)
     }

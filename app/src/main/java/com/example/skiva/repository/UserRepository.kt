@@ -1,6 +1,7 @@
 package com.example.skiva.repository
 
 import com.example.skiva.model.DataObat
+import com.example.skiva.model.DataSkincare
 import com.example.skiva.model.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
@@ -40,6 +41,19 @@ class UserRepository {
             .addOnSuccessListener { onSuccess() }
             .addOnFailureListener { e -> onFailure(e.message ?: "Failed to save obat data") }
     }
+
+    fun saveSkincare(
+        userId: String,
+        skincareList: List<DataSkincare>,
+        onSuccess: () -> Unit,
+        onFailure: (String) -> Unit
+    ) {
+        val skincareRef = firebaseDatabase.getReference("users").child(userId).child("skincare")
+        skincareRef.setValue(skincareList)
+            .addOnSuccessListener { onSuccess() }
+            .addOnFailureListener { e -> onFailure(e.message ?: "Failed to save skincare data") }
+    }
+
 
 
 }

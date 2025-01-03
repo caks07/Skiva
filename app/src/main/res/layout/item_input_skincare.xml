@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="447dp"
+        android:layout_height="663dp"
+        android:layout_marginBottom="32dp"
+        android:background="#FFFFFF"
+        app:cardCornerRadius="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="20dp"
+            android:text="Jadwal"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/Pagi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="50dp"
+            android:text="Pagi" />
+
+        <TextView
+            android:id="@+id/textTreatmentPagi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="90dp"
+            android:text="Treatment"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/inputTrathmentPagi"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="110dp"
+            android:ems="15"
+            android:inputType="text"
+            android:background="@drawable/background_obat2"/>
+
+        <CheckBox
+            android:id="@+id/Siang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="180dp"
+            android:text="Siang" />
+
+        <TextView
+            android:id="@+id/textTreatmentSiang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="220dp"
+            android:text="Treatment"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/inputTrathmentSiang"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="240dp"
+            android:ems="15"
+            android:inputType="text"
+            android:background="@drawable/background_obat2"/>
+
+        <CheckBox
+            android:id="@+id/Sore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="310dp"
+            android:text="Sore" />
+
+        <TextView
+            android:id="@+id/textTreatmentSore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="350dp"
+            android:text="Treatment"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/inputTrathmentSore"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="370dp"
+            android:ems="15"
+            android:inputType="text"
+            android:background="@drawable/background_obat2"/>
+
+        <CheckBox
+            android:id="@+id/Malam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="440dp"
+            android:text="Malam" />
+
+        <TextView
+            android:id="@+id/textTreatmentMalam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="480dp"
+            android:text="Treatment"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/inputTrathmentMalam"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="500dp"
+            android:ems="15"
+            android:inputType="text"
+            android:background="@drawable/background_obat2"/>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

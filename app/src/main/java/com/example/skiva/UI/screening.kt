@@ -24,27 +24,24 @@ class screening : AppCompatActivity() {
 
     private val questionsPerSection = listOf(
         listOf(
-            Pertanyaan("Apakah Anda merasa demam?"),
-            Pertanyaan("Apakah Anda merasa batuk kering?"),
-            Pertanyaan("Apakah Anda merasa sesak napas?")
+            Pertanyaan(id = "1", text = "Apakah Anda merasa demam?"),
+            Pertanyaan(id = "2", text = "Apakah Anda merasa batuk kering?"),
+            Pertanyaan(id = "3", text = "Apakah Anda merasa sesak napas?")
         ),
         listOf(
-            Pertanyaan("Apakah Anda merasa gatal-gatal?"),
-            Pertanyaan("Apakah Anda memiliki ruam pada kulit?"),
-            Pertanyaan("Apakah ada luka yang tidak sembuh?")
+            Pertanyaan(id = "4", text = "Apakah Anda merasa gatal-gatal?"),
+            Pertanyaan(id = "5", text = "Apakah Anda memiliki ruam pada kulit?"),
+            Pertanyaan(id = "6", text = "Apakah ada luka yang tidak sembuh?")
         ),
         listOf(
-            Pertanyaan("Apakah Anda pernah memiliki alergi kulit?"),
-            Pertanyaan("Apakah Anda sering menggunakan produk kulit tertentu?"),
-            Pertanyaan("Apakah Anda memiliki riwayat penyakit kulit dalam keluarga?")
+            Pertanyaan(id = "7", text = "Apakah Anda pernah memiliki alergi kulit?"),
+            Pertanyaan(id = "8", text = "Apakah Anda sering menggunakan produk kulit tertentu?"),
+            Pertanyaan(id = "9", text = "Apakah Anda memiliki riwayat penyakit kulit dalam keluarga?")
         )
     )
 
-
     private var currentSectionIndex = 0
-
-    private val allAnswers = HashMap<String, Boolean>()
-
+    private val allAnswers = mutableMapOf<String, Boolean>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,25 +52,39 @@ class screening : AppCompatActivity() {
         sectionTitle = findViewById(R.id.textView2)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
-
         loadSection(currentSectionIndex)
 
         nextButton.setOnClickListener {
+            if (!areAllQuestionsAnswered()) {
+                // Show a message if not all questions are answered
+                return@setOnClickListener
+            }
+
             if (currentSectionIndex < sections.size - 1) {
                 currentSectionIndex++
                 loadSection(currentSectionIndex)
             } else {
-                val intent = Intent(this, citra_medis::class.java) // Ganti ke aktivitas selanjutnya
+                val intent = Intent(this, citra_medis::class.java)
+                intent.putExtra("answers", HashMap(allAnswers))
                 startActivity(intent)
                 finish()
             }
         }
     }
 
+    private fun areAllQuestionsAnswered(): Boolean {
+        val unansweredQuestions = questionsPerSection[currentSectionIndex].filter { !allAnswers.containsKey(it.id) }
+        if (unansweredQuestions.isNotEmpty()) {
+            // Inform user to answer all questions
+            return false
+        }
+        return true
+    }
+
     private fun loadSection(index: Int) {
         sectionTitle.text = sections[index]
-        val adapter = PertanyaanAdapter(questionsPerSection[index].toMutableList()) { questionText, answer ->
-            allAnswers[questionText] = answer
+        val adapter = AdapterPertanyaan(questionsPerSection[index]) { pertanyaan, isSelected ->
+            allAnswers[pertanyaan.id] = isSelected
         }
         recyclerView.adapter = adapter
     }

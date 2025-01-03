@@ -2,13 +2,10 @@ package com.example.skiva.UI
 
 import InputObatViewModel
 import InputObatViewModelFactory
-import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
 import android.widget.CheckBox
-import android.widget.EditText
 import android.widget.ImageButton
-import android.widget.Spinner
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
@@ -17,11 +14,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.skiva.R
 import com.example.skiva.model.DataObat
 import com.example.skiva.repository.UserRepository
-import java.util.Calendar
 
 class input_obat : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: InputObatAdapter
+    private lateinit var adapter: AdapterInputObat
     private val resepObatList = mutableListOf<DataObat>()
     private lateinit var userId: String
 
@@ -47,7 +43,7 @@ class input_obat : AppCompatActivity() {
         val buttonAdd: ImageButton = findViewById(R.id.buttonAdd)
         val buttonSubmit: ImageButton = findViewById(R.id.imageButton)
 
-        adapter = InputObatAdapter(resepObatList)
+        adapter = AdapterInputObat(resepObatList)
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
 

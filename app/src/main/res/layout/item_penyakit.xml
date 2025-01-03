@@ -42,7 +42,7 @@
                 android:textStyle="italic" />
 
             <TextView
-                android:id="@+id/deskripsi"
+                android:id="@+id/gejala"
                 android:layout_width="246dp"
                 android:layout_height="25dp"
                 android:text="Ruam, Gatal, Infeksi"
