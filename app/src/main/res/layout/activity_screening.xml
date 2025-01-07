@@ -37,10 +37,9 @@
         app:layout_constraintVertical_bias="0.083" />
 
     <ImageView
-        android:id="@+id/image_arrow_back"
+        android:id="@+id/b_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="@drawable/b_back"
         android:src="@drawable/b_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/textView"

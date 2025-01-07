@@ -3,12 +3,14 @@ package com.example.skiva.UI
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.skiva.R
+import com.example.skiva.adapter.NavigationController
 import com.example.skiva.model.JudulArtikel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
@@ -210,6 +212,7 @@ class home_page : AppCompatActivity() {
             startActivity(intent)
         }
 
-
+        val navigationView = findViewById<View>(R.id.header_shortcut_include)
+        NavigationController(this, navigationView)
     }
 }

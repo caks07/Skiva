@@ -3,6 +3,7 @@ package com.example.skiva.UI
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import android.widget.ImageButton
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -12,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.skiva.R
+import com.example.skiva.adapter.NavigationController
 import com.example.skiva.utils.SessionManager
 import com.example.skiva.viewModel.JadwalObatViewModel
 import com.example.skiva.model.JadwalObat
@@ -115,6 +117,9 @@ class pengingat_obat : AppCompatActivity() {
             val intent = Intent(this, notifikasi::class.java)
             startActivity(intent)
         }
+
+        val navigationView = findViewById<View>(R.id.header_shortcut_include)
+        NavigationController(this, navigationView)
     }
 
     private fun updateProgressBar() {

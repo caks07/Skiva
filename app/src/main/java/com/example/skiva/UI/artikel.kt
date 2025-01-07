@@ -2,6 +2,7 @@ package com.example.skiva.UI
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -10,6 +11,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.skiva.R
+import com.example.skiva.adapter.NavigationController
 import com.example.skiva.model.JudulArtikel
 
 class artikel : AppCompatActivity() {
@@ -30,6 +32,7 @@ class artikel : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
 
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -97,6 +100,9 @@ class artikel : AppCompatActivity() {
             val intent = Intent(this, notifikasi::class.java)
             startActivity(intent)
         }
+
+        val navigationView = findViewById<View>(R.id.header_shortcut_include)
+        NavigationController(this, navigationView)
     }
 
     private fun populateData() {

@@ -1,10 +1,12 @@
 package com.example.skiva.UI
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.skiva.R
+import com.example.skiva.adapter.NavigationController
 import com.example.skiva.model.SkincarePromo
 import com.example.skiva.model.TreathmentPromo
 
@@ -30,5 +32,8 @@ class promo : AppCompatActivity() {
         val treathmentRecyclerView = findViewById<RecyclerView>(R.id.recycler_view_treathment)
         treathmentRecyclerView.layoutManager = LinearLayoutManager(this)
         treathmentRecyclerView.adapter = AdapterTreathmentPromo(treathmentData)
+
+        val navigationView = findViewById<View>(R.id.header_shortcut_include)
+        NavigationController(this, navigationView)
     }
 }

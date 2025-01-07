@@ -88,4 +88,5 @@ class screening : AppCompatActivity() {
         }
         recyclerView.adapter = adapter
     }
+
 }
