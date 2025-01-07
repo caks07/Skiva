@@ -103,6 +103,12 @@ class pengingat_obat : AppCompatActivity() {
             val intent = Intent(this, home_page::class.java)
             startActivity(intent)
         }
+        val buttonBadge: ImageButton = findViewById(R.id.imageButtonBadge)
+        buttonBadge.setOnClickListener {
+            val intent = Intent(this, badge::class.java)
+            startActivity(intent)
+        }
+
 
         val buttonNotif: ImageButton = findViewById(R.id.imageButtonNotif)
         buttonNotif.setOnClickListener {

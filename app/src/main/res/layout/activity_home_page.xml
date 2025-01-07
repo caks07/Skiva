@@ -96,7 +96,7 @@
             </androidx.cardview.widget.CardView>
 
             <ImageButton
-                android:id="@+id/imageButton4"
+                android:id="@+id/imagepromo"
                 android:layout_width="354dp"
                 android:layout_height="154dp"
                 android:layout_marginTop="28dp"
@@ -108,30 +108,30 @@
                 app:srcCompat="@drawable/promo" />
 
             <ImageButton
-                android:id="@+id/imageButton11"
+                android:id="@+id/CekPromo"
                 android:layout_width="135dp"
                 android:layout_height="47dp"
                 android:layout_marginTop="20dp"
                 android:backgroundTint="#00FFFFFF"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton10"
+                app:layout_constraintEnd_toStartOf="@+id/imageProgress"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@+id/imageButton9"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+                app:layout_constraintTop_toBottomOf="@+id/imagepromo"
                 app:srcCompat="@drawable/b_promo" />
 
             <ImageButton
-                android:id="@+id/imageButton10"
-                android:layout_width="135dp"
-                android:layout_height="47dp"
+                android:id="@+id/imageProgress"
+                android:layout_width="137dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="13dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginBottom="8dp"
                 android:backgroundTint="#00FFFFFF"
                 app:layout_constraintBottom_toTopOf="@+id/poin"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.951"
+                app:layout_constraintHorizontal_bias="0.962"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+                app:layout_constraintTop_toBottomOf="@+id/imagepromo"
                 app:srcCompat="@drawable/b_progres" />
 
             <ImageButton
@@ -146,7 +146,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.02"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+                app:layout_constraintTop_toBottomOf="@+id/imagepromo"
                 app:srcCompat="@drawable/b_koin" />
 
             <ImageView
@@ -157,7 +157,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.111"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+                app:layout_constraintTop_toBottomOf="@+id/imagepromo"
                 app:srcCompat="@drawable/link_kulit" />
 
             <ImageButton
@@ -222,7 +222,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:layout_marginTop="120dp"
+                    android:layout_marginTop="130dp"
                     android:backgroundTint="#00FFFFFF"
                     app:srcCompat="@drawable/b_screening" />
 
@@ -313,16 +313,18 @@
                     android:layout_gravity="left"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="10dp"
+                    android:backgroundTint="#00FFFFFF"
                     app:srcCompat="@drawable/b_konsultasi" />
 
                 <ImageButton
+                    android:id="@+id/laporan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="10dp"
-                    app:srcCompat="@drawable/b_laporan"
-                    android:id="@+id/laporan"/>
+                    android:backgroundTint="#00FFFFFF"
+                    app:srcCompat="@drawable/b_laporan" />
 
             </FrameLayout>
 
@@ -353,15 +355,15 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"
-                android:layout_width="375dp"
-                android:layout_height="274dp"
+                android:layout_width="340dp"
+                android:layout_height="452dp"
                 android:layout_marginTop="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.507"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/Nama"
-                app:layout_constraintVertical_bias="0.02" />
+                app:layout_constraintVertical_bias="1.0" />
 
             <TextView
                 android:id="@+id/textView12"
@@ -370,7 +372,7 @@
                 android:text="1000K"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="@+id/imageButton9"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton11"
+                app:layout_constraintEnd_toStartOf="@+id/CekPromo"
                 app:layout_constraintHorizontal_bias="0.6"
                 app:layout_constraintStart_toStartOf="@+id/imageButton9"
                 app:layout_constraintTop_toTopOf="@+id/imageButton9"

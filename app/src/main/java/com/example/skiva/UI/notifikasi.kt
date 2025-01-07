@@ -1,11 +1,14 @@
 package com.example.skiva.UI
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.skiva.R
+import com.example.skiva.model.Notifikasi
 
 class notifikasi : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +25,11 @@ class notifikasi : AppCompatActivity() {
                 Notifikasi("Minum Obat C", "Minum sebelum tidur", "21.00")
             )
         )
+
+        val buttonBack: ImageButton = findViewById(R.id.b_back)
+        buttonBack.setOnClickListener {
+            val intent = Intent(this, home_page::class.java)
+            startActivity(intent)
+        }
     }
 }
-
-data class Notifikasi(val title: String, val description: String, val time: String)

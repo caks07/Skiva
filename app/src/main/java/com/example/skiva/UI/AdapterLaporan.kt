@@ -1,5 +1,6 @@
 package com.example.skiva.UI
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,11 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.skiva.R
-
-data class LaporanData(
-    val namaDokter: String,
-    val tanggal: String
-)
+import com.example.skiva.model.LaporanData
 
 class AdapterLaporan(private val data: List<LaporanData>) :
     RecyclerView.Adapter<AdapterLaporan.LaporanViewHolder>() {
@@ -33,8 +30,13 @@ class AdapterLaporan(private val data: List<LaporanData>) :
         holder.namaDokter.text = laporan.namaDokter
         holder.tanggal.text = laporan.tanggal
         holder.button.setOnClickListener {
-            // Tambahkan aksi saat tombol "Selengkapnya" ditekan
-            println("Tombol 'Selengkapnya' ditekan untuk: ${laporan.namaDokter}")
+            // Aksi saat tombol "Selengkapnya" ditekan
+            val context = holder.itemView.context
+            val intent = Intent(context, detail_laporan::class.java).apply {
+                putExtra("NAMA_DOKTER", laporan.namaDokter)
+                putExtra("TANGGAL", laporan.tanggal)
+            }
+            context.startActivity(intent)
         }
     }
 

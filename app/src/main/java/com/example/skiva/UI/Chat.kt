@@ -65,7 +65,7 @@ class Chat : AppCompatActivity() {
         // Navigasi ke halaman badge
         val buttonBack: ImageButton = findViewById(R.id.back)
         buttonBack.setOnClickListener {
-            val intent = Intent(this, home_page::class.java)
+            val intent = Intent(this, layanan_konsultasi::class.java)
             startActivity(intent)
         }
     }

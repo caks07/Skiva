@@ -4,7 +4,8 @@ import InputSkincareViewModel
 import InputSkincareViewModelFactory
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
+import android.widget.CheckBox
+import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -20,7 +21,9 @@ class input_skincare : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapter: AdapterInputSkincare
     private val skincareList = mutableListOf<DataSkincare>()
-    private lateinit var userId: String
+    private val userId: String by lazy {
+        getSharedPreferences("USER_SESSION", MODE_PRIVATE).getString("USER_ID", null) ?: ""
+    }
 
     private val viewModel: InputSkincareViewModel by viewModels {
         InputSkincareViewModelFactory(UserRepository())
@@ -30,14 +33,6 @@ class input_skincare : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_input_skincare)
 
-        userId = getSharedPreferences("USER_SESSION", MODE_PRIVATE)
-            .getString("USER_ID", null) ?: run {
-            Toast.makeText(this, "User session not found. Please login again.", Toast.LENGTH_SHORT)
-                .show()
-            finish()
-            return
-        }
-
         recyclerView = findViewById(R.id.recyclerViewInput)
         val buttonAdd: ImageButton = findViewById(R.id.buttonAdd)
         val buttonSubmit: ImageButton = findViewById(R.id.imageButton)
@@ -46,31 +41,39 @@ class input_skincare : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
 
-
         buttonAdd.setOnClickListener {
-            try {
-                skincareList.add(DataSkincare(waktu = "", treatment = ""))
-                adapter.notifyItemInserted(skincareList.size - 1)
-                Log.d("InputSkincare", "Item added: ${skincareList.last()}")
-            } catch (e: Exception) {
-                Log.e("InputSkincare", "Error saat menambahkan item: ${e.message}")
-            }
+            skincareList.add(DataSkincare(waktu = "", treatment = ""))
+            adapter.notifyItemInserted(skincareList.size - 1)
         }
-
 
         buttonSubmit.setOnClickListener {
-            if (skincareList.any { it.treatment.isBlank() }) {
-                Toast.makeText(this, "Please fill all treatments.", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
-            }
+            val waktuList = mutableListOf<String>()
+
+            if (findViewById<CheckBox>(R.id.Pagi).isChecked) waktuList.add("Pagi")
+            if (findViewById<CheckBox>(R.id.Siang).isChecked) waktuList.add("Siang")
+            if (findViewById<CheckBox>(R.id.Sore).isChecked) waktuList.add("Sore")
+            if (findViewById<CheckBox>(R.id.Malam).isChecked) waktuList.add("Malam")
+
+            val treatmentPagi = findViewById<EditText>(R.id.inputTrathmentPagi).text.toString()
+            val treatmentSiang = findViewById<EditText>(R.id.inputTrathmentSiang).text.toString()
+            val treatmentSore = findViewById<EditText>(R.id.inputTrathmentSore).text.toString()
+            val treatmentMalam = findViewById<EditText>(R.id.inputTrathmentMalam).text.toString()
+
+            val skincareList = mutableListOf<DataSkincare>()
+
+            if (waktuList.contains("Pagi")) skincareList.add(DataSkincare(waktu = "Pagi", treatment = treatmentPagi))
+            if (waktuList.contains("Siang")) skincareList.add(DataSkincare(waktu = "Siang", treatment = treatmentSiang))
+            if (waktuList.contains("Sore")) skincareList.add(DataSkincare(waktu = "Sore", treatment = treatmentSore))
+            if (waktuList.contains("Malam")) skincareList.add(DataSkincare(waktu = "Malam", treatment = treatmentMalam))
 
             viewModel.saveSkincare(userId, skincareList, {
-                Toast.makeText(this, "Skincare berhasil disimpan!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Data skincare berhasil disimpan!", Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, pengingat_skincare::class.java))
                 finish()
-            }, { error ->
-                Toast.makeText(this, error, Toast.LENGTH_SHORT).show()
+            }, {
+                Toast.makeText(this, "Gagal menyimpan data skincare.", Toast.LENGTH_SHORT).show()
             })
         }
+
     }
 }

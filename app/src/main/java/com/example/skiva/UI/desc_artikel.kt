@@ -1,6 +1,8 @@
 package com.example.skiva.UI
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -27,6 +29,12 @@ class desc_artikel : AppCompatActivity() {
         // Fungsi tombol kembali
         backButton.setOnClickListener {
             finish()
+        }
+
+        val buttonSubmit: Button = findViewById(R.id.submitReview)
+        buttonSubmit.setOnClickListener {
+            val intent = Intent(this, artikel::class.java)
+            startActivity(intent)
         }
     }
 }

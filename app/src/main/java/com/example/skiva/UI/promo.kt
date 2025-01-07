@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.skiva.R
+import com.example.skiva.model.SkincarePromo
+import com.example.skiva.model.TreathmentPromo
 
 class promo : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

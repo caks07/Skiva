@@ -59,8 +59,6 @@
         android:id="@+id/Nama"
         android:layout_width="183dp"
         android:layout_height="35dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="200dp"
         android:text="Penyakit dengan"
         android:textColor="#5F5F5F"
         android:textSize="24sp"
@@ -70,15 +68,13 @@
         app:layout_constraintHorizontal_bias="0.71"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.166" />
+        app:layout_constraintVertical_bias="0.41" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="92dp"
         android:layout_height="32dp"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="29dp"
-        android:layout_marginBottom="200dp"
         android:text="Analisis"
         android:textColor="#03A9F4"
         android:textSize="24sp"
@@ -88,14 +84,12 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.405" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="165dp"
         android:layout_height="32dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="130dp"
         android:text="yang Mudah"
         android:textAlignment="center"
         android:textSize="24sp"
@@ -105,14 +99,12 @@
         app:layout_constraintHorizontal_bias="0.686"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.456" />
+        app:layout_constraintVertical_bias="0.537" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="133dp"
         android:layout_height="30dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="130dp"
         android:text="Gambar"
         android:textAlignment="center"
         android:textColor="#03A9F4"
@@ -123,21 +115,20 @@
         app:layout_constraintHorizontal_bias="0.251"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.44" />
+        app:layout_constraintVertical_bias="0.541" />
 
     <TextView
         android:id="@+id/Email"
         android:layout_width="301dp"
         android:layout_height="48dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginBottom="100dp"
         android:text="Analisis Menggunakan Machine Learning Akan Mendapatkan Hasil dan Saran yang Optimal"
         android:textAlignment="center"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/bNext1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.729" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -145,11 +136,35 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/bNext1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintHorizontal_bias="0.398"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Email"
-        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintVertical_bias="0.545"
         app:srcCompat="@drawable/loading" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/bNext1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Email"
+        app:layout_constraintVertical_bias="0.545"
+        app:srcCompat="@drawable/loading3" />
+
+    <ImageView
+        android:id="@+id/poin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/bNext1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Email"
+        app:layout_constraintVertical_bias="0.545"
+        app:srcCompat="@drawable/loading2" />
 
     <ImageView
         android:id="@+id/ubahPaassword"
@@ -157,10 +172,10 @@
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toTopOf="@+id/bNext1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintHorizontal_bias="0.480"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Email"
-        app:layout_constraintVertical_bias="0.8"
+        app:layout_constraintVertical_bias="0.545"
         app:srcCompat="@drawable/loading" />
 
     <ImageView
@@ -174,30 +189,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/outline_horizontal_rule_24" />
 
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/bNext1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.617"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Email"
-        app:layout_constraintVertical_bias="0.266"
-        app:srcCompat="@drawable/loading3" />
 
-    <ImageView
-        android:id="@+id/poin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/bNext1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.56"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Email"
-        app:layout_constraintVertical_bias="0.56"
-        app:srcCompat="@drawable/loading2" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

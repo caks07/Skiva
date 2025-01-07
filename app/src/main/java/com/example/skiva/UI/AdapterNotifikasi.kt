@@ -7,6 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.skiva.R
+import com.example.skiva.model.Notifikasi
 
 class AdapterNotifikasi(private val list: List<Notifikasi>) :
     RecyclerView.Adapter<AdapterNotifikasi.ViewHolder>() {

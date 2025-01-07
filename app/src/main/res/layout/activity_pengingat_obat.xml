@@ -84,36 +84,36 @@
 
                 <TextView
                     android:id="@+id/Bulan"
-                    android:layout_width="89dp"
+                    android:layout_width="160dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="10dp"
                     android:text="Bulan"
                     android:textAlignment="textStart"
-                    android:textSize="16sp"
+                    android:textSize="20sp"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/Hari"
-                    android:layout_width="wrap_content"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="40dp"
                     android:layout_marginBottom="20dp"
                     android:text="Hari"
-                    android:textAlignment="center"
+                    android:textAlignment="textStart"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/Tanggal"
-                    android:layout_width="51dp"
+                    android:layout_width="81dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="250dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="Tanggal"
+                    android:text="07"
                     android:textAlignment="textStart"
-                    android:textSize="24sp"
+                    android:textSize="50sp"
                     android:textStyle="bold" />
 
             </androidx.cardview.widget.CardView>

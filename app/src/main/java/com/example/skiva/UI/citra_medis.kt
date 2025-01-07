@@ -48,12 +48,7 @@ class citra_medis : AppCompatActivity() {
 
         submitButton.setOnClickListener {
             val notes = additionalNotes.text.toString()
-            if (selectedBitmap == null && notes.isEmpty()) {
-                Toast.makeText(this, "Harap unggah foto atau masukkan catatan", Toast.LENGTH_SHORT).show()
-                return@setOnClickListener
-            }
-            val imageBase64 = selectedBitmap?.let { bitmapToBase64(it) } ?: ""
-
+            val imageBase64 = selectedBitmap?.let { bitmapToBase64(it) }
             val intent = Intent(this, result_screening::class.java).apply {
                 putExtra("imageBase64", imageBase64)
                 putExtra("notes", notes)

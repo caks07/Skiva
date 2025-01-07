@@ -20,22 +20,23 @@
         android:id="@+id/laporan_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Laporan"
+        android:text="Pencapaian Anda"
         android:textColor="#D1000000"
+        android:textSize="20dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
+        app:layout_constraintVertical_bias="0.038" />
 
     <ImageButton
         android:layout_width="66dp"
         android:layout_height="49dp"
         android:background="@android:color/transparent"
         android:contentDescription="Back"
-        android:src="@drawable/sharp_chevron_left_24"
+        android:src="@drawable/b_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/laporan_title"
         app:layout_constraintHorizontal_bias="0.303"
@@ -43,18 +44,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.022"
         android:id="@+id/back"/>
-
-    <ImageButton
-        android:layout_width="71dp"
-        android:layout_height="52dp"
-        android:background="@android:color/transparent"
-        android:contentDescription="More options"
-        android:src="@drawable/baseline_more_horiz_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.664"
-        app:layout_constraintStart_toEndOf="@+id/laporan_title"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.022" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

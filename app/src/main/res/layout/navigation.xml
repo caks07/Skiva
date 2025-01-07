@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!-- FrameLayout untuk menampung shortcut navigasi -->
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="347dp"
@@ -14,10 +15,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.963"
-        tools:layout_editor_absoluteX="32dp">
+        app:layout_constraintVertical_bias="0.963">
 
+        <!-- Button untuk Navigasi Home -->
         <ImageButton
+            android:id="@+id/homeButton"
             android:layout_width="34dp"
             android:layout_height="34dp"
             android:layout_marginLeft="15dp"
@@ -25,7 +27,9 @@
             android:background="@android:color/transparent"
             android:src="@drawable/sharp_home_24" />
 
+        <!-- Button untuk Navigasi Pengingat Obat -->
         <ImageButton
+            android:id="@+id/reminderButton"
             android:layout_width="34dp"
             android:layout_height="34dp"
             android:layout_marginLeft="85dp"
@@ -33,15 +37,9 @@
             android:background="@android:color/transparent"
             android:src="@drawable/sharp_moving_24" />
 
+        <!-- Button untuk Navigasi Laporan -->
         <ImageButton
-            android:layout_width="34dp"
-            android:layout_height="34dp"
-            android:layout_marginLeft="295dp"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/sharp_person_24" />
-
-        <ImageButton
+            android:id="@+id/reportButton"
             android:layout_width="34dp"
             android:layout_height="34dp"
             android:layout_marginLeft="225dp"
@@ -49,14 +47,23 @@
             android:background="@android:color/transparent"
             android:src="@drawable/outline_event_note_24" />
 
+        <!-- Button untuk Navigasi Profil -->
+        <ImageButton
+            android:id="@+id/profileButton"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="295dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/sharp_person_24" />
     </FrameLayout>
 
-    <Button
-        android:id="@+id/editProfile"
+    <!-- Tombol tambahan untuk fungsi lain -->
+    <ImageButton
+        android:id="@+id/screeningButton"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:background="@drawable/button"
-        android:backgroundTint="#00BCD4"
         android:rotation="45"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,14 +72,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.908" />
 
+    <!-- Icon tambahan -->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:src="@drawable/round_cloud_upload_24"
-        app:layout_constraintBottom_toBottomOf="@+id/editProfile"
-        app:layout_constraintEnd_toEndOf="@+id/editProfile"
-        app:layout_constraintStart_toStartOf="@+id/editProfile"
-        app:layout_constraintTop_toTopOf="@+id/editProfile" />
-
+        app:layout_constraintBottom_toBottomOf="@+id/screeningButton"
+        app:layout_constraintEnd_toEndOf="@+id/screeningButton"
+        app:layout_constraintStart_toStartOf="@+id/screeningButton"
+        app:layout_constraintTop_toTopOf="@+id/screeningButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

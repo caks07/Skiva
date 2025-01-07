@@ -8,14 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.skiva.R
-
-data class TreathmentPromo(
-    val nama: String,
-    val deskripsi: String,
-    val gambar: Int,
-    val hargaKoin: String,
-    val hargaRupiah: String
-)
+import com.example.skiva.model.TreathmentPromo
 
 class AdapterTreathmentPromo(private val data: List<TreathmentPromo>) :
     RecyclerView.Adapter<AdapterTreathmentPromo.TreathmentViewHolder>() {

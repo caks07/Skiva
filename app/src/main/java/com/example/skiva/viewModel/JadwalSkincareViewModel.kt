@@ -1,6 +1,5 @@
 package com.example.skiva.viewModel
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.skiva.model.JadwalSkincare
@@ -12,22 +11,31 @@ class JadwalSkincareViewModel(private val repository: JadwalSkincareRepository) 
     val jadwalSiang = MutableLiveData<List<JadwalSkincare>>()
     val jadwalSore = MutableLiveData<List<JadwalSkincare>>()
     val jadwalMalam = MutableLiveData<List<JadwalSkincare>>()
+    val errorMessage = MutableLiveData<String>()
 
     fun loadJadwalSkincare(userId: String) {
-        repository.getJadwalSkincare(userId, "Pagi", { data ->
+        repository.getJadwalSkincareByTime(userId, "Pagi", { data ->
             jadwalPagi.postValue(data)
-        }, { /* handle error */ })
+        }, { error ->
+            errorMessage.postValue("Failed to load Jadwal Pagi: ${error.message}")
+        })
 
-        repository.getJadwalSkincare(userId, "Siang", { data ->
+        repository.getJadwalSkincareByTime(userId, "Siang", { data ->
             jadwalSiang.postValue(data)
-        }, { /* handle error */ })
+        }, { error ->
+            errorMessage.postValue("Failed to load Jadwal Siang: ${error.message}")
+        })
 
-        repository.getJadwalSkincare(userId, "Sore", { data ->
+        repository.getJadwalSkincareByTime(userId, "Sore", { data ->
             jadwalSore.postValue(data)
-        }, { /* handle error */ })
+        }, { error ->
+            errorMessage.postValue("Failed to load Jadwal Sore: ${error.message}")
+        })
 
-        repository.getJadwalSkincare(userId, "Malam", { data ->
+        repository.getJadwalSkincareByTime(userId, "Malam", { data ->
             jadwalMalam.postValue(data)
-        }, { /* handle error */ })
+        }, { error ->
+            errorMessage.postValue("Failed to load Jadwal Malam: ${error.message}")
+        })
     }
 }

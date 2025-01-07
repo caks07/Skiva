@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.skiva.R
 import com.example.skiva.model.JadwalSkincare
+import com.example.skiva.model.Saran
 import com.example.skiva.repository.JadwalSkincareRepository
 import com.example.skiva.utils.SessionManager
 import com.example.skiva.viewModel.JadwalSkincareViewModel
@@ -41,6 +42,34 @@ class pengingat_skincare : AppCompatActivity() {
             finish()
             return
         }
+
+// Setup RecyclerView for Saran with Dummy Data
+        val recyclerViewSaran = findViewById<RecyclerView>(R.id.saran)
+        recyclerViewSaran.layoutManager = LinearLayoutManager(this)
+
+        val dummySaranList = listOf(
+            Saran(
+                namaObat = "Moisturizer A",
+                catatan = "Gunakan setiap pagi setelah mandi.",
+                linkProduk = "https://example.com/product/moisturizer-a",
+                gambarSaran = "https://via.placeholder.com/150"
+            ),
+            Saran(
+                namaObat = "Sunscreen B",
+                catatan = "Aplikasikan sebelum keluar rumah.",
+                linkProduk = "https://example.com/product/sunscreen-b",
+                gambarSaran = "https://via.placeholder.com/150"
+            ),
+            Saran(
+                namaObat = "Serum C",
+                catatan = "Gunakan sebelum tidur untuk hasil maksimal.",
+                linkProduk = "https://example.com/product/serum-c",
+                gambarSaran = "https://via.placeholder.com/150"
+            )
+        )
+
+        recyclerViewSaran.adapter = AdapterSaran(dummySaranList)
+
 
         val recyclerViewPagi = findViewById<RecyclerView>(R.id.jadwalObatPagi)
         val recyclerViewSiang = findViewById<RecyclerView>(R.id.jadwalObatSiang)
@@ -110,7 +139,10 @@ class pengingat_skincare : AppCompatActivity() {
 
         val progress = if (totalItems > 0) (checkedItems * 100) / totalItems else 0
         progressBar.progress = progress
+        findViewById<TextView>(R.id.progressPercentage).text = "$progress%"
     }
+
+
 
     private fun Int?.orZero() = this ?: 0
 }

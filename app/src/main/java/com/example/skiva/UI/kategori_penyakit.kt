@@ -37,17 +37,17 @@ class kategori_penyakit : AppCompatActivity() {
                 Log.e("Firebase", "Error fetching diseases: $error")
             }
         )
-    }
-
-    private fun navigateToDetail(disease: Disease) {
-        val intent = Intent(this, detail_penyakit::class.java)
-        intent.putExtra("DISEASE_ID", disease.id_penyakit)
-        startActivity(intent)
 
         val buttonBack: ImageButton = findViewById(R.id.back_button)
         buttonBack.setOnClickListener {
             val intent = Intent(this, home_page::class.java)
             startActivity(intent)
         }
+    }
+
+    private fun navigateToDetail(disease: Disease) {
+        val intent = Intent(this, detail_penyakit::class.java)
+        intent.putExtra("DISEASE_ID", disease.id_penyakit)
+        startActivity(intent)
     }
 }

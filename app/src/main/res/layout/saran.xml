@@ -32,12 +32,14 @@
         android:layout_marginStart="200dp"
         android:layout_marginTop="20dp"
         android:background="#00FFFFFF"
-        app:srcCompat="@drawable/link_produk" />
+        app:srcCompat="@drawable/link_produk"
+        android:id="@+id/LinkProduk"/>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="300dp"
-        app:srcCompat="@drawable/img_saran" />
+        app:srcCompat="@drawable/img_saran"
+        android:id="@+id/imgSaran"/>
 
 </androidx.cardview.widget.CardView>

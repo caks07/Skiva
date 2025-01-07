@@ -13,7 +13,7 @@ class AdapterInputSkincare(private val dataList: MutableList<DataSkincare>) :
     RecyclerView.Adapter<AdapterInputSkincare.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val treatment: EditText = itemView.findViewById(R.id.recyclerViewInput)
+        val treatment: EditText = itemView.findViewById(R.id.inputTrathmentPagi)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -23,13 +23,11 @@ class AdapterInputSkincare(private val dataList: MutableList<DataSkincare>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = dataList[position]
-        holder.treatment.setText(item.treatment) // Isi treatment dari data
-
+        holder.treatment.setText(item.treatment)
         holder.treatment.addTextChangedListener {
-            item.treatment = it.toString() // Simpan perubahan ke data
+            item.treatment = it.toString()
         }
     }
-
 
     override fun getItemCount() = dataList.size
 }
