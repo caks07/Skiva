@@ -1,7 +1,10 @@
 package com.example.skiva.UI
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -35,5 +38,11 @@ class promo : AppCompatActivity() {
 
         val navigationView = findViewById<View>(R.id.header_shortcut_include)
         NavigationController(this, navigationView)
+
+        val buttonBack: ImageButton = findViewById(R.id.imageButtonBack)
+        buttonBack.setOnClickListener {
+            val intent = Intent(this, home_page::class.java)
+            startActivity(intent)
+        }
     }
 }
